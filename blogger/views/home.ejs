@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%=homeStartingContent%></p>
+
+
+<% for (BlogPost of blogPosts) { %>
+  <h1><%= BlogPost.title %></h1>
+  <p><%= BlogPost.body.substring(0, 100) + ("...") %>
+  <a href="/posts/<%=BlogPost.title%>">Read More</a>
+  </p>
+<% } %>
+
+
+
+
+<%- include("partials/footer"); -%>
